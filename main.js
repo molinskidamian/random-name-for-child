@@ -36,3 +36,4 @@ function randomName(e) {
 }
 
 btn.addEventListener('click', randomName);
+console.log('Dodaj bazę imion');
