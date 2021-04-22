@@ -13,29 +13,24 @@ function randomNumber(min, max) {
 
 function randomName(e) {
   e.preventDefault();
-  // console.log(sex);
+
+  const writeName = document.querySelector('.show-name');
 
   sexArr = [...sex];
 
   const filtered = sexArr.filter((el) => el.checked);
-  console.log(`Wybrana płeć: ${filtered[0].value}`);
 
   switch (filtered[0].value) {
     case 'boy':
-      console.log('losuj imię dla chłopca');
-
-      console.log(boys[randomNumber(0, boys.length)]);
-
+      writeName.textContent = boys[randomNumber(0, boys.length)];
       break;
 
     case 'girl':
-      console.log('losuj imię dla dziewczynki');
-      console.log(girls[randomNumber(0, girls.length)]);
+      writeName.textContent = girls[randomNumber(0, girls.length)];
       break;
 
     default:
       console.log('default');
-
       break;
   }
 }
